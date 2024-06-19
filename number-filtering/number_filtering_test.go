@@ -1,6 +1,7 @@
 package numberfiltering
 
 import (
+	"errors"
 	"math"
 	"reflect"
 	"testing"
@@ -30,6 +31,13 @@ var isPrime = func(number int) bool {
         }
         return isPrimeNumber
     }
+}
+
+var isMultipleOf = func (num int, divisor int) (bool, error) {
+    if divisor == 0 {
+        return false, errors.New("cannot divide by zero")
+    }
+    return num % divisor == 0, nil
 }
 
 func TestGetOddNumbers(t *testing.T) {
@@ -123,3 +131,33 @@ func TestGetOddPrimeNumbers(t *testing.T) {
 	}
 	})
 }
+
+func TestGetEvenMultiplesOfFiveNumbers(t *testing.T) {
+	t.Run("Test get even multiples of five numbers with [1 2 3 4 5 6 7 8 9 10]", func(t *testing.T) {
+		numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+		got := FilterNumbersWithAllConditions(numbers, isEven, func(num int) bool {
+			multiple, _ := isMultipleOf(num, 5)
+			return multiple
+		})
+		want := []int{10}
+
+		if !reflect.DeepEqual(got, want) {
+			t.Errorf("wanted: %v but got: %v", want, got)
+		}
+	})
+
+	t.Run("Test get even multiples of five numbers with [12 15 18 20 22 25 27 30]", func(t *testing.T) {
+		numbers := []int{12, 15, 18, 20, 22, 25, 27, 30}
+		got := FilterNumbersWithAllConditions(numbers, isEven, func(num int) bool {
+			multiple, _ := isMultipleOf(num, 5)
+			return multiple
+		})
+		want := []int{20, 30}
+
+		if !reflect.DeepEqual(got, want) {
+			t.Errorf("wanted: %v but got: %v", want, got)
+		}
+	})
+}
+
+
