@@ -139,8 +139,8 @@ func TestGetOddThreeMultipleNumbersGreaterThanTen(t *testing.T) {
 
 	t.Run("Test get odd three multiple numbers > 10 with [42 24 1 93 57 3 11 80 6 59]", func(t *testing.T) {
 		numbers := []int{42, 24, 1, 93, 57, 3, 11, 80, 6, 59}
-		got:= GetEvenNumbersWhichAreMultipleOf5(numbers)
-		want:= []int{80}
+		got:= GetOddNumbersWhichAreMultipleOf3AndGreaterThan10(numbers)
+		want:= []int{93, 57}
 
 		if !reflect.DeepEqual(got, want) {
 		t.Errorf("wanted: %v but got: %v", want, got)
