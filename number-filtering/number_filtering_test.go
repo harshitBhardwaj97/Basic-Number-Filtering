@@ -100,3 +100,26 @@ func TestGetPrimeNumbers(t *testing.T) {
 	}
 	})
 }
+
+func TestGetOddPrimeNumbers(t *testing.T) {
+
+	t.Run("Test get odd prime numbers with [1 2 3 4 5 6 7 8 9 10]", func(t *testing.T) {
+		numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+		got:= FilterNumbersWithAllConditions(numbers, isPrime, isOdd)
+		want:= []int{3, 5, 7}
+
+		if !reflect.DeepEqual(got, want) {
+		t.Errorf("wanted: %v but got: %v", want, got)
+	}
+	})
+
+	t.Run("Test get odd prime numbers with [2 81 69 4 47 54 84 37 87]", func(t *testing.T) {
+		numbers := []int{2, 81, 69, 4, 47, 54, 84, 37, 87}
+		got:= FilterNumbersWithAllConditions(numbers, isPrime, isOdd)
+		want:= []int{47, 37}
+
+		if !reflect.DeepEqual(got, want) {
+		t.Errorf("wanted: %v but got: %v", want, got)
+	}
+	})
+}
