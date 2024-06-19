@@ -229,3 +229,32 @@ func TestStorySevenAllConditionsSample(t *testing.T){
 	})
 	
 }
+
+func TestStoryEightAnyConditionSample(t *testing.T){
+	t.Run("Test get prime or multiples of five or greater than fifteen numbers with [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20]", func(t *testing.T) {
+		numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
+		got := FilterNumbersWithAnyCondition(numbers, isPrime, func(num int) bool {
+			multiple, _ := isMultipleOf(num, 5)
+			return multiple
+		}, isGreaterThan(15))
+		want := []int{2, 3, 5, 7, 10, 11, 13, 15, 16, 17, 18, 19, 20}
+
+		if !reflect.DeepEqual(got, want) {
+			t.Errorf("wanted: %v but got: %v", want, got)
+		}
+	})
+	
+	t.Run("Test get less than 6 or multiples of three numbers with [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20]", func(t *testing.T) {
+		numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
+		got := FilterNumbersWithAnyCondition(numbers, func(num int) bool {
+			multiple, _ := isMultipleOf(num, 3)
+			return multiple
+		}, isLessThan(6))
+		want := []int{1, 2, 3, 4, 5, 6, 9, 12, 15, 18}
+
+		if !reflect.DeepEqual(got, want) {
+			t.Errorf("wanted: %v but got: %v", want, got)
+		}
+	})
+	
+}
