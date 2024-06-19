@@ -1,0 +1,50 @@
+=== RUN   TestGetOddNumbers
+=== RUN   TestGetOddNumbers/Test_get_odd_numbers_with_[1_2_3_4_5_6_7_8_9_10]
+=== RUN   TestGetOddNumbers/Test_get_odd_numbers_with_[12_77_99_60_28_93_75_49]
+--- PASS: TestGetOddNumbers (0.00s)
+    --- PASS: TestGetOddNumbers/Test_get_odd_numbers_with_[1_2_3_4_5_6_7_8_9_10] (0.00s)
+    --- PASS: TestGetOddNumbers/Test_get_odd_numbers_with_[12_77_99_60_28_93_75_49] (0.00s)
+=== RUN   TestGetEvenNumbers
+=== RUN   TestGetEvenNumbers/Test_get_even_numbers_with_[1_2_3_4_5_6_7_8_9_10]
+=== RUN   TestGetEvenNumbers/Test_get_even_numbers_with_[12_77_99_60_28_93_75_49]
+--- PASS: TestGetEvenNumbers (0.00s)
+    --- PASS: TestGetEvenNumbers/Test_get_even_numbers_with_[1_2_3_4_5_6_7_8_9_10] (0.00s)
+    --- PASS: TestGetEvenNumbers/Test_get_even_numbers_with_[12_77_99_60_28_93_75_49] (0.00s)
+=== RUN   TestGetPrimeNumbers
+=== RUN   TestGetPrimeNumbers/Test_get_prime_numbers_with_[1_2_3_4_5_6_7_8_9_10]
+=== RUN   TestGetPrimeNumbers/Test_get_prime_numbers_with_[20_32_59_41_60_27_50_29_61_90]
+--- PASS: TestGetPrimeNumbers (0.00s)
+    --- PASS: TestGetPrimeNumbers/Test_get_prime_numbers_with_[1_2_3_4_5_6_7_8_9_10] (0.00s)
+    --- PASS: TestGetPrimeNumbers/Test_get_prime_numbers_with_[20_32_59_41_60_27_50_29_61_90] (0.00s)
+=== RUN   TestGetOddPrimeNumbers
+=== RUN   TestGetOddPrimeNumbers/Test_get_odd_prime_numbers_with_[1_2_3_4_5_6_7_8_9_10]
+=== RUN   TestGetOddPrimeNumbers/Test_get_odd_prime_numbers_with_[2_81_69_4_47_54_84_37_87]
+--- PASS: TestGetOddPrimeNumbers (0.00s)
+    --- PASS: TestGetOddPrimeNumbers/Test_get_odd_prime_numbers_with_[1_2_3_4_5_6_7_8_9_10] (0.00s)
+    --- PASS: TestGetOddPrimeNumbers/Test_get_odd_prime_numbers_with_[2_81_69_4_47_54_84_37_87] (0.00s)
+=== RUN   TestGetEvenMultiplesOfFiveNumbers
+=== RUN   TestGetEvenMultiplesOfFiveNumbers/Test_get_even_multiples_of_five_numbers_with_[1_2_3_4_5_6_7_8_9_10]
+=== RUN   TestGetEvenMultiplesOfFiveNumbers/Test_get_even_multiples_of_five_numbers_with_[12_15_18_20_22_25_27_30]
+--- PASS: TestGetEvenMultiplesOfFiveNumbers (0.00s)
+    --- PASS: TestGetEvenMultiplesOfFiveNumbers/Test_get_even_multiples_of_five_numbers_with_[1_2_3_4_5_6_7_8_9_10] (0.00s)
+    --- PASS: TestGetEvenMultiplesOfFiveNumbers/Test_get_even_multiples_of_five_numbers_with_[12_15_18_20_22_25_27_30] (0.00s)
+=== RUN   TestGetOddMultiplesOfThreeGreaterThanTenNumbers
+=== RUN   TestGetOddMultiplesOfThreeGreaterThanTenNumbers/Test_get_odd_multiples_of_three_and_greater_than_ten_numbers_with_[1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20_21]
+=== RUN   TestGetOddMultiplesOfThreeGreaterThanTenNumbers/Test_get_odd_multiples_of_three_and_greater_than_ten_numbers_with_[12_15_18_20_22_25_27_30]
+--- PASS: TestGetOddMultiplesOfThreeGreaterThanTenNumbers (0.00s)
+    --- PASS: TestGetOddMultiplesOfThreeGreaterThanTenNumbers/Test_get_odd_multiples_of_three_and_greater_than_ten_numbers_with_[1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20_21] (0.00s)
+    --- PASS: TestGetOddMultiplesOfThreeGreaterThanTenNumbers/Test_get_odd_multiples_of_three_and_greater_than_ten_numbers_with_[12_15_18_20_22_25_27_30] (0.00s)
+=== RUN   TestStorySevenAllConditionsSample
+=== RUN   TestStorySevenAllConditionsSample/Test_get_odd_multiples_of_three_and_greater_than_five_numbers_with_[1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20]
+=== RUN   TestStorySevenAllConditionsSample/Test_get_even_multiples_of_three_and_less_than_fifteen_numbers_with_[1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20]
+--- PASS: TestStorySevenAllConditionsSample (0.00s)
+    --- PASS: TestStorySevenAllConditionsSample/Test_get_odd_multiples_of_three_and_greater_than_five_numbers_with_[1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20] (0.00s)
+    --- PASS: TestStorySevenAllConditionsSample/Test_get_even_multiples_of_three_and_less_than_fifteen_numbers_with_[1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20] (0.00s)
+=== RUN   TestStoryEightAnyConditionSample
+=== RUN   TestStoryEightAnyConditionSample/Test_get_prime_or_multiples_of_five_or_greater_than_fifteen_numbers_with_[1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20]
+=== RUN   TestStoryEightAnyConditionSample/Test_get_less_than_6_or_multiples_of_three_numbers_with_[1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20]
+--- PASS: TestStoryEightAnyConditionSample (0.00s)
+    --- PASS: TestStoryEightAnyConditionSample/Test_get_prime_or_multiples_of_five_or_greater_than_fifteen_numbers_with_[1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20] (0.00s)
+    --- PASS: TestStoryEightAnyConditionSample/Test_get_less_than_6_or_multiples_of_three_numbers_with_[1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20] (0.00s)
+PASS
+ok  	basic-number-filtering/number-filtering	0.698s
