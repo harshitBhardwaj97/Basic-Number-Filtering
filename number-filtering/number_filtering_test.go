@@ -46,6 +46,12 @@ func isGreaterThan(threshold int) func(int) bool {
 	}
 }
 
+func isLessThan(threshold int) func(int) bool {
+	return func(num int) bool {
+		return num < threshold
+	}
+}
+
 func TestGetOddNumbers(t *testing.T) {
 
 	t.Run("Test get odd numbers with [1 2 3 4 5 6 7 8 9 10]", func(t *testing.T) {
@@ -193,4 +199,33 @@ t.Run("Test get odd multiples of three and greater than ten numbers with [1 2 3 
 			t.Errorf("wanted: %v but got: %v", want, got)
 		}
 	})
+}
+
+func TestStorySevenAllConditionsSample(t *testing.T){
+	t.Run("Test get odd multiples of three and greater than five numbers with [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20]", func(t *testing.T) {
+		numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
+		got := FilterNumbersWithAllConditions(numbers, isOdd, func(num int) bool {
+			multiple, _ := isMultipleOf(num, 3)
+			return multiple
+		}, isGreaterThan(5))
+		want := []int{9, 15}
+
+		if !reflect.DeepEqual(got, want) {
+			t.Errorf("wanted: %v but got: %v", want, got)
+		}
+	})
+	
+	t.Run("Test get even multiples of three and less than fifteen numbers with [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20]", func(t *testing.T) {
+		numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
+		got := FilterNumbersWithAllConditions(numbers, isEven, func(num int) bool {
+			multiple, _ := isMultipleOf(num, 3)
+			return multiple
+		}, isLessThan(15))
+		want := []int{6, 12}
+
+		if !reflect.DeepEqual(got, want) {
+			t.Errorf("wanted: %v but got: %v", want, got)
+		}
+	})
+	
 }
