@@ -1,6 +1,5 @@
 package numberfiltering
 
-
 func FilterNumbersWithAllConditions(numbers []int, conditions ...func(int) bool) []int {
 	var result []int
 	for _, num := range numbers {
@@ -13,8 +12,8 @@ func FilterNumbersWithAllConditions(numbers []int, conditions ...func(int) bool)
 			}
 		}
 		if matchesAllConditions {
-            result = append(result, num)
-        }
+			result = append(result, num)
+		}
 	}
 	return result
 }
@@ -30,8 +29,8 @@ func FilterNumbersWithAnyCondition(numbers []int, conditions ...func(int) bool) 
 			}
 		}
 		if matchesAnyCondition {
-            result = append(result, num)
-        }
+			result = append(result, num)
+		}
 	}
 	return result
 }
